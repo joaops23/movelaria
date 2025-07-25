@@ -34,3 +34,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+# 
+# Movelaria Odara
+
+Projeto de reconstrução do site https://movelaria.odara.com.br
+
+## Entidades
+- Autenticação e usuários controlados pelo NextJs
+
+### Galerias ( tela de portifólio )
+- arq_id PK
+- arq_url
+- arq_descricao 
+- arq_sessao_id FK sessao(ses_id)
+
+
+### Sessao ( de fotos )
+- ses_id
+- ses_title
+- ses_index
+
+## Techs
+- Javascript / Typescript
+- nextjs
+- Pattern: MVC
+- Vercel
+- supabase
+    - PostgreSQL
+
+## Features
+- Tela de home, com apresentação principal da loja
+- Tela de serviços, configurável via tela admin
+- Tela admin, não listada
