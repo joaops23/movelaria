@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { FormDataLogin } from "@/Interface/FormDataInterface";
 import { useAuth } from '@/context/authContext';
+import { redirect } from 'next/navigation';
 export default function login() {
     const [loadingSubmit, setLoadingSubmit] = React.useState(false);
     const [formData, setFormData] = React.useState<FormDataLogin>({
@@ -22,6 +23,7 @@ export default function login() {
         setLoadingSubmit(true);
         await logIn({"email": formData.email, "password": formData.password})
         setLoadingSubmit(false);
+        redirect("/");
     }
     return(
             <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">

@@ -21,7 +21,7 @@ export default class Cookies {
     }
 
 
-    getCookie = async(key: string) => {
+    getCookie = async(key: string): Promise<any> => {
         const ck = await cookies();
 
         return ck.get(key);

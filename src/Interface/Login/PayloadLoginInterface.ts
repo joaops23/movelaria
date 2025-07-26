@@ -7,6 +7,9 @@ export interface ResponseLoginInterface {
     data: {
         success: Boolean,
         message?: String,
-        error?: String
+        error?: String,
+        user?: {
+            userId?: string;
+        }
     }
 }
