@@ -41,8 +41,18 @@ export const AuthProvider = ({children}) => {
             .catch(err => console.error("Erro: " + err))
     }
 
-    const logOut = () =>{
-        setAuth(null)
+    const logOut = async() =>{
+        await fetch("/api/auth/logout", {
+            method: "GET"
+        })
+            .then((response)  => {
+                if(!response.status) {
+                    alert(response.data.message || "Aconteceu algo de errado na integração")
+                    return false;
+                }
+                setAuth(null)
+            })
+            .catch(err => console.error("Erro: " + err))
     }
 
     return (

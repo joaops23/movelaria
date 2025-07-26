@@ -1,13 +1,20 @@
 "use client"
 import { useAuth } from "@/context/authContext";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { FC } from "react"
 interface HeaderProps {
     title?: string;
 }
 
 const Header: FC<HeaderProps> = ({title = "Movelaria Odara"}) => {
-    const {auth} = useAuth();
+    const {auth, logOut} = useAuth();
+
+    const handleLogOut = async() => {
+        await logOut();
+
+        redirect('/login');
+    }
     return (
           <header className="bg-[#E0DEAB] text-[#85685a] p-4 shadow-md">
             <div>
@@ -21,7 +28,7 @@ const Header: FC<HeaderProps> = ({title = "Movelaria Odara"}) => {
                     <Link href='/Services' className="hover:underline font-bold dark:text-sky-400/100">Portifólio</Link>
                 </nav>
                 {auth && 
-                    <Link href='#' className='hover:underline font-bold float-end'>Sair</Link>
+                    <Link href='#' onClick={handleLogOut} className='hover:underline font-bold float-end'>Sair</Link>
                 }
             </div>
         </header>
