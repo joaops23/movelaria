@@ -14,7 +14,6 @@ export const AuthProvider = ({children}) => {
 
         if(!data.access_token){
             //TODO: Verificar rotas seguras para redirecionar caso a sessão expire
-            console.log('usuário não logado')
             return
         }
         
