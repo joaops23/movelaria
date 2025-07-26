@@ -68,3 +68,11 @@ Projeto de reconstrução do site https://movelaria.odara.com.br
 - Tela de home, com apresentação principal da loja
 - Tela de serviços, configurável via tela admin
 - Tela admin, não listada
+- Login, Não listado
+
+### TODO
+- Criar funcionalidades da tela de admin (configuração de sessões de fotos e upload de imagens)
+- Revisão de autenticação e segurança 
+- Revisão de estilo da tela de login
+- aplicar estilos nas telas de home e portifólio 
+- Criar tela de contato ( com formulário enviado por email para administração do site)
